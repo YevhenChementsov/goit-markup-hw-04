@@ -47,7 +47,7 @@ img {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 /* ===============  COMPONENTS  =============== */
 .list {
@@ -181,9 +181,48 @@ img {
 .page-footer .address .link:focus {
   color: var(--accent-color);
 }
-.page-header .contacts-item:hover .icon,
-.page-header .contacts-item:focus .icon {
+.page-header .icon-link:hover .icon,
+.page-header .icon-link:focus .icon {
   fill: var(--accent-color);
+}
+.page-footer .footer-list {
+  display: flex;
+}
+.page-footer .welcome {
+  margin-bottom: 20px;
+  padding-top: 72px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+.page-footer .footer-item:not(:last-child) {
+  margin-right: 70px;
+}
+.page-footer .footer-item .social-list {
+  display: flex;
+  align-items: center;
+}
+.page-footer .footer-item .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.page-footer .footer-item .social-link:hover,
+.page-footer .footer-item .social-link:focus {
+  background-color: var(--accent-color);
+}
+.footer-item .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.page-footer .footer-item .icon {
+  fill: var(--primary-white-color);
 }
 /* ===============  END HEADER & FOOTER  =============== */
 
@@ -255,6 +294,17 @@ img {
 .features .item:not(:last-child) {
   margin-right: 30px;
 }
+.features .icon-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: var(--grey-background);
+  margin-bottom: 30px;
+}
+.features .icon {
+  fill: var(--primary-color);
+}
 .features-list .subtitle {
   color: var(--primary-color);
   font-weight: bold;
@@ -276,7 +326,7 @@ img {
 /* ===============  WHAT ARE WE DOING  =============== */
 .our-job {
   padding-top: 47px;
-  padding-bottom: 47px;
+  padding-bottom: 94px;
 }
 .our-job .title {
   margin-right: auto;
@@ -301,7 +351,7 @@ img {
 /* ===============  OUR TEAM  =============== */
 .our-team {
   background-color: var(--grey-background);
-  padding-top: 47px;
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 .our-team .title {
@@ -327,10 +377,7 @@ img {
   margin-right: 30px;
 } */
 .our-team .card {
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 .team-card .name {
   color: var(--primary-color);
@@ -348,8 +395,71 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+.our-team .social-list {
+  display: flex;
+  align-items: center;
+}
+.our-team .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.our-team .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+}
+.our-team .social-link:hover,
+.our-team .social-link:focus {
+  background-color: var(--accent-color);
+}
+.our-team .social-link:hover .icon,
+.our-team .social-link:focus .icon {
+  fill: var(--primary-white-color);
 }
 /* ===============  END OUR TEAM  =============== */
+
+/* ===============  REGULAR CUSTOMERS  =============== */
+.regular-customers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.regular-customers .title {
+  margin-bottom: 50px;
+}
+.regular-customers .customers-list {
+  display: flex;
+  align-items: center;
+}
+.regular-customers .customers-item:not(:last-child) {
+  margin-right: 30px;
+}
+.regular-customers .customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.regular-customers .customers-link:hover,
+.regular-customers .customers-link:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.regular-customers .customers-link:hover .logo,
+.regular-customers .customers-link:focus .logo {
+  fill: var(--accent-color);
+}
+.regular-customers .logo {
+  fill: #afb1b8;
+}
+/* ===============  END REGULAR CUSTOMERS  =============== */
 
 /* ===============  PORTFOLIO  =============== */
 .portfolio {
@@ -404,6 +514,13 @@ img {
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc(100% / 3 - 30px);
+}
+.portfolio .project:hover,
+.portfolio .project:focus {
+  background: var(--white-background);
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-list .title {
   color: var(--primary-color);
